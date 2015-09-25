@@ -1,11 +1,11 @@
-/*    ---------------               BEGINNING OF MULTILINE COMMENT OF ALL CODE               ---------------- 
+//  /*    ---------------               BEGINNING OF MULTILINE COMMENT OF ALL CODE               ---------------- 
 
-
+/*
 
 //               YOU WILL NOT SEE THE CONSOLE.LOG AND ALERT MESSAGES FROM THE SCRIPT.JS FILE   	 
 //	                  - THE STEPS ARE  COMMENTED OUT  USING A MULTILINE COMMENT 
     			
-//     	REMOVE THE FIRST AND LAST LINE OF THE MULTILINE COMMENT TO SEE THE CONSOLE.LOG AND ALERT
+//          	REMOVE THE FIRST AND LAST LINE OF SCRIPT TO SEE THE CONSOLE.LOG AND ALERT AND PROMPT 
 
 
 //                       			 JOE MCDONALD       SEPT 2015
@@ -17,14 +17,11 @@
 
 
 //  ---------------------------------------------                            -------
- //  jQuery 
- //  !function(){
-//	      console.log('self invoking anonymous funcion'); 
-//   } ();
 
-       window.onLoad = function() {}      
- 
-/*
+ // window.onLoad = function() {  
+// 		   alert("Page is loaded");  
+//    }					       // WINDOWS ONLOAD  
+
 
 
 //  ------------------------------------------      STEP 1    PROMPT  LENGTH   -------------   
@@ -36,7 +33,7 @@ alert ("STEP 1 - Hello " + sName + ", Your name is  " + sName.length + " long " 
 //  ------------------------------------------      STEP 2    CHARACTER  -------------
 
 var sName = prompt ("Please enter your Name: ", "enter name here");
-var nNum = prompt (" Enter a number and a character in that position from your Name will be displayed:   ", "enter number here");
+var nNum = prompt (" Enter a number and a character in that position, from your Name will be displayed:   ", "enter number here");
 var sChar = sName.charAt(nNum - 1);
 alert ("STEP 2 - Your name is: " + sName +  " \nThe number you entered is: " + nNum + " \nA character of your name in that numeric position is: " + sChar);
 
@@ -61,14 +58,14 @@ alert ("STEP 5 - The last Index of the word 'fox' in the " + sQuote +" is: " + s
 
 var sQuote = "The quick brown fox jumps over the lazy dog" ;
 var sFullName = prompt ("Please enter your Full Name: ", "enter full name here");
-alert ("STEP 6 - The new Quote insterting your name is: \n" + sQuote.replace("the lazy dog", sFullName));
+alert ("STEP 6 - The new Quote inserting your name is: \n" + sQuote.replace("the lazy dog", sFullName));
 
 
 //  ------------------------------------------      STEP 7    SEARCH STRING RETURNS INDEX       -------------
 var sQuote = "The quick brown fox jumps over the lazy dog" ;
 var sSearchWord = prompt ("Please enter a word to search for in the quote: \n" + sQuote, "enter word here");
-alert ("STEP 7 - The index of the word you are searcing for is: " + sQuote.search(sSearchWord));
-alert (" \nThe character position of the word you are searcing for is: " + (sQuote.search(sSearchWord) +1 ));
+alert ("STEP 7 - The index of the word you are searching for is: " + sQuote.search(sSearchWord));
+alert (" \nThe character position of the word you are searching for is: " + (sQuote.search(sSearchWord) +1 ));
 
 
 
@@ -78,7 +75,7 @@ var old_string = "The quick brown fox jumps over the lazy dog" ;
 var sSearchString = "the lazy dog";
 var nSearchStringIndex = old_string.search(sSearchString);
 var new_string = old_string.substr(nSearchStringIndex, sSearchString.length);
-alert ("STEP 8 - The index of the word you are searcing for in the quote: \n" + sQuote + " is: " + nSearchStringIndex + "\n The UPPER CASE of the new_string is: " + (new_string.toUpperCase()));
+alert ("STEP 8 - The index of the word - "  + sSearchString + " - you are searching for in the quote: \n" + sQuote + " is: " + nSearchStringIndex + "\n The UPPER CASE of the new_string is: " + (new_string.toUpperCase()));
 
 //  ------------------------------------------      STEP 9     TRIM      -------------
 
@@ -93,11 +90,10 @@ alert ("STEP 10 - Capitalized first letter is: " + (sQuote.substr(0,1).toUpperCa
 
 
 
-// }					       // WINDOWS ONLOAD
-
 // ==========================================================================================================
 // ==========================================================================================================
 //											 ASSIGNMENT2 
+
 //								               PART 2 
 
 
@@ -123,7 +119,7 @@ console.log ("STEP 3 - The rounded down number you entered is: " + Math.floor(nN
 
 
 
-//  ------------------------------------------      STEP 4    MIN MAX              -------------   
+//  ------------------------------------------      STEP 4    MIN MAX          -------------   
 
 var nNum1 = prompt ("STEP 4 -  Enter 1st number :   ", "enter number here");
 var nNum2 = prompt ("          Enter 2nd number :   ", "enter number here");
@@ -133,38 +129,16 @@ var nNum5 = prompt ("          Enter 5th number :   ", "enter number here");
 
 var nResultMin = Math.min(nNum1, nNum2, nNum3, nNum4, nNum5);
 var nResultMax = Math.max(nNum1, nNum2, nNum3, nNum4, nNum5);
-console.log ("STEP 4 B The largest &  smallest numbers : " + nResultMax + " " + nResultMin);
+console.log ("STEP 4 - The largest number: " + nResultMax +  " &  smallest numbers: "  + nResultMin);
 
 // ---------------------------------
-
-
-var sNumbers = prompt ("STEP 4 -  Enter 5 comma delimied numbers (example= 1,2,3,4,5 ):   ", "enter numbers here");
-var numArr = [sNumbers];
-
-console.log ("STEP 4 a 1 - The largest & smallest numbers of " + sNumbers + " - " + numArr + " are: " + Math.max(numArr) + " " + Math.min(numArr) );   
-
-//-------------  
-
-console.log ("STEP 4 a 2- The largest & smallest numbers of " + sNumbers + " - " + numArr + " are: " + Math.max(numArr) + " " + Math.min.apply(null, numArr));
-
-// --------------
-
-
-var nNumbers = (nNum1, nNum2, nNum3, nNum4, nNum5 );
-console.log ("STEP 4 C -  The largest & smallest numbers of " + nNumbers + " are: " + Math.max(nNumbers) + " " + Math.min(nNumbers) );
-
-// ----------------
-	
-var nArray = [nNum1, nNum2, nNum3, nNum4, nNum5];
-var nArrayMin = Math.min(nArray);
-var nArrayMax = Math.max(nArray);
-console.log ("STEP 4 D Array Result : " + nArrayMax + " " + nArrayMin);
 
 
 //  ------------------------------------------      STEP 5  SQUARE ROOT    -------------   
 
 var nNum = prompt ("STEP 5 - Enter a number:   ", "enter number here");
 console.log ("STEP 5 - The square root of the number " + nNum + " is: " + Math.sqrt(nNum) )
+
 
 
 //  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -177,11 +151,10 @@ console.log("STEP 6 - The current date (month & day & year ) is: " + (d.getMonth
 
 
 
-
 //  ------------------------------------------      STEP 7   DAYS IN MONTH  -------------   
-
-var nMonth = prompt ("STEP 7 - Enter a month:   ", "enter month here");
-var nYear = prompt ("STEP 7 - Enter a year:   ", "enter year here");
+alert("\n\nSTEP 7 - To see the number of days in the month");
+var nMonth = prompt (" Enter a month(mm):   ", "enter month here");
+var nYear = prompt (" Enter a year(yyyy):   ", "enter year here");
 
 Date.prototype.daysinMonth = function(){
     var d= new Date(this.getFullYear(), this.getMonth()+1, 0);
@@ -194,43 +167,39 @@ function daysinMonthfromInput(month,year){
 
 console.log ("STEP 7 - " + (daysinMonthfromInput(nMonth,nYear)) + " days in the month of " + nMonth + " of year " + nYear );
 
-//  ------------------------------------------      STEP 8   MONTH NAME              -------------   
 
-var d = new Date (prompt ("STEP 8 - enter date here in the mm/dd/yyyy format :", "enter date here"     ));
+//  ------------------------------------------      STEP 8   MONTH NAME              -------------   
+alert("\n\nSTEP 8 - To see the mnonth's name for a particular date");
+var d = new Date (prompt ("enter date here in the mm/dd/yyyy format :", "enter date here"     ));
 var month=['January' , 'February' ,'March', 'April' , 'May' ,'June', 'July' , 'August' ,'September', 'October' , 'November' ,'December'];
 var n = month[d.getMonth()];
-console.log("STEP 8 - Month name from " + d + " is " + n);
+console.log("Month name from " + d + " is " + n);
 
 
 
 //  ------------------------------------------      STEP 9  WEEKEND        -------------   
-
-
 var myDate = new Date (prompt ("STEP 9 - enter date here in the mm/dd/yyyy format :", "enter date here"     ));
 
 if(myDate.getDay() == 6 || myDate.getDay() == 0)  {
-	console.log("STEP 9 - This " + myDate + " date is a Weekend!"); 
+	console.log("\n\nSTEP 9 - This " + myDate + " date is a Weekend!"); 
   }  else { 
-		console.log("STEP 9 - This " + myDate + " date is NOT a Weekend!");
+		console.log("\n\nSTEP 9 - This " + myDate + " date is NOT a Weekend!");
          } ;
-
 
 
 //  ------------------------------------------      STEP 10   YESTERDAY     -------------   
 
 var myDate = new Date (prompt ("STEP 10 - enter today's (or your choice) date here in the mm/dd/yyyy format :", "enter date here"     ));
 var day = ['Sunday' , 'Monday' , 'Tuesday' , 'Wednesday' , 'Thursday' , 'Friday' , 'Saturday'];
-console.log("STEP 10 - Today is : "  + day[myDate.getDay() - 1 ] + "     Yesterday is : " + day[myDate.getDay() - 2 ]);
+console.log("\n\nSTEP 10 - Today is : "  + day[myDate.getDay() - 1 ] + "     Yesterday is : " + day[myDate.getDay() - 2 ]);
+
 
 //  ------------------------------------------      STEP 11  CURRENT DATE FIRST LETTER               -------------  
-
-
-
-var myDate = new Date (prompt ("STEP 11 - enter current (your choice) day of week here in the mm/dd/yyyy format :", "enter date here"     ));
+var myDate = new Date (prompt ("STEP 11 - enter current (your choice) date in the mm/dd/yyyy format :", "enter date here"     ));
 var day = ['Sunday' , 'Monday' , 'Tuesday' , 'Wednesday' , 'Thursday' , 'Friday' , 'Saturday'];
 var sToDay = day[myDate.getDay() ] ;
 
-console.log("STEP 11 - The current (your choice) day of week (month / day / year ) is: " + (myDate.getMonth() + 1) + "/" +  myDate.getDate() + "/" +  myDate.getFullYear() +  " \n The string version of the date is: " +  myDate.toDateString() + "\n The first letter of the day is : " + sToDay.substr(0,1));
+console.log("\n\nSTEP 11 - The current (your choice) date (month / day / year ) is: " + (myDate.getMonth() + 1) + "/" +  myDate.getDate() + "/" +  myDate.getFullYear() +  " \n The string version of the date is: " +  myDate.toDateString() + "\n The first letter of the day is : " + sToDay.substr(0,1));
 
 
 
@@ -240,43 +209,47 @@ console.log("STEP 11 - The current (your choice) day of week (month / day / year
 //  ------------------------------------------      STEP 12   LARGER NUMBER    -------------   
 var nNum1 = prompt ("STEP 12 -  Enter 1st number :   ", "enter number here");
 var nNum2 = prompt ("           Enter 2nd number :   ", "enter number here");
-
+console.log( "\n\nSTEP 12 - Show the largest of two numbers " );
 if ( nNum1 > nNum2) {
-	console.log ("STEP 12 - Entered numbers: " + nNum1 + ", " + nNum2 +  " This is the largest number " + nNum1 );
+	console.log (" Two entered numbers: " + nNum1 + ", " + nNum2 +  " The largest number is: " + nNum1 );
 				 }
 	else if (nNum2 > nNum1) { 
-		console.log ("STEP 12 - Entered numbers:  " + nNum1 + ", " +  nNum2 +  " This is the largest number " + nNum2 );
+		console.log (" Two entered numbers:  " + nNum1 + ", " +  nNum2 +  " The largest number is: " + nNum2 );
 	}
 	  else { 
-		  console.log ("STEP 12 - Entered numbers:  " + nNum1 + ", " +  nNum2 +  " Numbers are equal" );
+		  console.log (" Two entered numbers:  " + nNum1 + ", " +  nNum2 +  " The two numbers are equal" );
 	  }
+
+
 
 //  ------------------------------------------      STEP 13  GRADE          -------------   
 
 var strArray = [ ["Ursula", 80] , ["Paul", 77] , ["Henry", 88], ["Tabitha", 95], ["Lucy", 68] ];
-
+console.log( "\n\nSTEP 13 - Student Names &bMarks & Grades " );
 for (var i = 0; i < strArray.length; i++) {
-		if (strArray[i][1] < 60  ) {
-			console.log( "STEP 13 - Student: " + strArray[i][0] + " , mark = " + strArray[i][1] + " , Grade = F" ) ;
+		
+	if (strArray[i][1] < 60  ) {
+			console.log( "Student: " + strArray[i][0] + " , mark = " + strArray[i][1] + " , Grade = F" ) ;
 			
 		} else if (strArray[i][1] < 70  ) {
-			console.log( "STEP 13 - Student: " + strArray[i][0] + " , mark = " + strArray[i][1] + " , Grade = D" );
+			console.log( "Student: " + strArray[i][0] + " , mark = " + strArray[i][1] + " , Grade = D" );
 			
         } else if (strArray[i][1] < 80  ) {
-           console.log( "STEP 13 - Student: " + strArray[i][0] + " , mark = " + strArray[i][1] + " , Grade = C" ) ;
+           console.log( "Student: " + strArray[i][0] + " , mark = " + strArray[i][1] + " , Grade = C" ) ;
 		
 		} else if (strArray[i][1] < 90  ) {
-			console.log( "STEP 13 - Student: " + strArray[i][0] + " , mark = " + strArray[i][1] + " , Grade = B" ) ;
+			console.log( "Student: " + strArray[i][0] + " , mark = " + strArray[i][1] + " , Grade = B" ) ;
 			
 		} else if (strArray[i][1] < 100 ) {
-			console.log( "STEP 13 - Student: " + strArray[i][0] + " , mark = " + strArray[i][1] + " , Grade = A" );
+			console.log( "Student: " + strArray[i][0] + " , mark = " + strArray[i][1] + " , Grade = A" );
 			
 		} else {
 			continue;	
 		}};
 
+
 //  ------------------------------------------      STEP 14   FOR LOOP              -------------   
-console.log (" STEP 14 - ");
+console.log (" \n\n STEP 14 - Loop through 15 numbers showing if the number is EVEN or ODD ");
 for (var i = 1; i <= 15; i++) {
 		
 		if (i % 2 == 0 ){
@@ -289,7 +262,7 @@ for (var i = 1; i <= 15; i++) {
 
 
 //  ------------------------------------------      STEP 15  MODULUS      -------------   
-console.log (" STEP 15 - ");
+console.log (" \n \n STEP 15 - Loops through 100 numbers  \nif the number is a multiple of 3 show Fizz \nIf it is a multiple of 5 show Buzz \nIf it is a multiple of both 3 & 5 show FizzBuzz  ");
 for (var i = 1; i <= 100; i++) {
 		if ((i % 3 == 0) && (i % 5 ==  0) ){
 			console.log (" i = " + i + "  FizzBuzz");
@@ -337,10 +310,10 @@ case "left" :
 		alert("Your thirst has gotten the better of you. You trip on a rock, hit your head, and fall into a pool of water and drown.");
 		break;
 case "right" :
-		alert("You found the gold! You walk into a small room and see southands of gold coins, jewels, chalices, and more. You jump into the pile of gold in celebration and immediately a hidden door slams down and traps you in the room forever.");
+		alert("You found the gold! You walk into a small room and see thousands of gold coins, jewels, chalices, and more. You jump into the pile of gold in celebration and immediately a hidden door slams down and traps you in the room forever.");
 		break;
 default :
-		alert("The ghost of Captain Chingadrea has condemned you to eternal damnation an dyou shall now urn in the hot exoriation for lifeless lowlifes for not choosing the correct option....loser.");
+		alert("The ghost of Captain Chingadrea has condemned you to eternal damnation and you shall now urn in the hot excoriation for lifeless lowlifes for not choosing the correct option....loser.");
 }
 
 
@@ -359,8 +332,6 @@ if (nScore => 6 && nScore <= 10 ) {
 		}
 
 
-
-
 //  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //  ------------------------------------------      PART 5 GAME            -------------  
 
@@ -369,16 +340,14 @@ if (nScore => 6 && nScore <= 10 ) {
 	var coinFlip = Math.random();
 	alert("STEP 1 - coinFlip random number is " + coinFlip);
 
+
 //  ------------------------------------------      STEP 2    CHOICE       -------------   
 
    var choice = prompt("STEP 2 - PLAYER - PLEASE ENTER - HEADS or TAILS " , "lower case please").toLowerCase();
    alert("Your choice is " + choice); 
 
 
-
 //  ------------------------------------------      STEP 3   COIN FLIP     -------------   
-
-
 
 	if (coinFlip < .5 ) {
       alert("STEP 3 - The coinFlip is less than .5 which represents - heads ");
@@ -386,6 +355,7 @@ if (nScore => 6 && nScore <= 10 ) {
      else if (coinFlip >= .5 ) {
      alert ("STEP 3 - The coinFlip is greater than or equal to .5 which represents - tails");
     }   
+ 
  
 //  ------------------------------------------      STEP 4 - 7  WIN OR LOSE    -------------   
 
@@ -492,10 +462,7 @@ console.log("I have reached the end!");
 //  ------------------------------------------      PART 8  LOOPING TRIANGLE   ------------- 
 //  ------------------------------------------      STEP 1 -               ------------- 
 
-
-
-	   console.log (" PART 8 LOOPING TRIANGLE  ");
-
+console.log (" PART 8 LOOPING TRIANGLE  ");
 var strArray = ["#", "##", "###", "####", "#####",  "######", "#######"];
 for (var i = 0; i < strArray.length; i++) {
 	console.log (strArray[i]);			
@@ -515,5 +482,12 @@ for (var i = 0; i <= 15; i++) {
 			console.log ( i + " is ODD");
 				 }
 		};
-		
+
+
+
 */       //  -------------------            END OF MULTILINE COMMENT                    --------------------------------
+
+		   
+		   
+ 								   
+								   
